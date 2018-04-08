@@ -1,23 +1,23 @@
 <?php if ($this->_var['goods_list']): ?>
-<?php $_from = $this->_var['goods_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_21482400_1522069450');if (count($_from)):
-    foreach ($_from AS $this->_var['goods_0_21482400_1522069450']):
+<?php $_from = $this->_var['goods_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_00336500_1523222151');if (count($_from)):
+    foreach ($_from AS $this->_var['goods_0_00336500_1523222151']):
 ?>
  <li>
  <div class="p-img">
- <a target="_blank" href="<?php echo $this->_var['goods_0_21482400_1522069450']['url']; ?>">
- <img src="<?php echo $this->_var['goods_0_21482400_1522069450']['goods_thumb']; ?>" alt="<?php echo $this->_var['goods_0_21482400_1522069450']['goods_name']; ?>">
+ <a target="_blank" href="<?php echo $this->_var['goods_0_00336500_1523222151']['url']; ?>">
+ <img src="<?php echo $this->_var['goods_0_00336500_1523222151']['goods_thumb']; ?>" alt="<?php echo $this->_var['goods_0_00336500_1523222151']['goods_name']; ?>">
  </a>
  </div>
  <div class="p-name">
- <a target="_blank" href="<?php echo $this->_var['goods_0_21482400_1522069450']['url']; ?>"><?php echo $this->_var['goods_0_21482400_1522069450']['goods_name']; ?>
+ <a target="_blank" href="<?php echo $this->_var['goods_0_00336500_1523222151']['url']; ?>"><?php echo $this->_var['goods_0_00336500_1523222151']['goods_name']; ?>
  </a> 
  </div>
  <div class="p-comm">
  <span class="p-price main-color">
-  <?php if ($this->_var['goods_0_21482400_1522069450']['promote_price'] != ""): ?> 
-  <?php echo $this->_var['goods_0_21482400_1522069450']['promote_price']; ?> 
+  <?php if ($this->_var['goods_0_00336500_1523222151']['promote_price'] != ""): ?> 
+  <?php echo $this->_var['goods_0_00336500_1523222151']['promote_price']; ?> 
   <?php else: ?> 
-  <?php echo $this->_var['goods_0_21482400_1522069450']['shop_price']; ?> 
+  <?php echo $this->_var['goods_0_00336500_1523222151']['shop_price']; ?> 
    <?php endif; ?> 
  </span> 
  </div>

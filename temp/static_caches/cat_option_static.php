@@ -2416,22 +2416,6 @@ $data = array (
     'id' => '80',
     'name' => '机电设备',
   ),
-  232 => 
-  array (
-    'cat_id' => '232',
-    'cat_name' => '配电箱',
-    'measure_unit' => '',
-    'parent_id' => '80',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 2,
-    'id' => '232',
-    'name' => '配电箱',
-  ),
   230 => 
   array (
     'cat_id' => '230',
@@ -2464,6 +2448,22 @@ $data = array (
     'id' => '231',
     'name' => '开关',
   ),
+  232 => 
+  array (
+    'cat_id' => '232',
+    'cat_name' => '配电箱',
+    'measure_unit' => '',
+    'parent_id' => '80',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 2,
+    'id' => '232',
+    'name' => '配电箱',
+  ),
   77 => 
   array (
     'cat_id' => '77',
@@ -2479,38 +2479,6 @@ $data = array (
     'level' => 1,
     'id' => '77',
     'name' => '手动工具',
-  ),
-  213 => 
-  array (
-    'cat_id' => '213',
-    'cat_name' => '多功能维修工具',
-    'measure_unit' => '',
-    'parent_id' => '77',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 2,
-    'id' => '213',
-    'name' => '多功能维修工具',
-  ),
-  220 => 
-  array (
-    'cat_id' => '220',
-    'cat_name' => '刀剪',
-    'measure_unit' => '',
-    'parent_id' => '77',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 2,
-    'id' => '220',
-    'name' => '刀剪',
   ),
   218 => 
   array (
@@ -2560,6 +2528,38 @@ $data = array (
     'id' => '216',
     'name' => '水平尺',
   ),
+  213 => 
+  array (
+    'cat_id' => '213',
+    'cat_name' => '多功能维修工具',
+    'measure_unit' => '',
+    'parent_id' => '77',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 2,
+    'id' => '213',
+    'name' => '多功能维修工具',
+  ),
+  220 => 
+  array (
+    'cat_id' => '220',
+    'cat_name' => '刀剪',
+    'measure_unit' => '',
+    'parent_id' => '77',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 2,
+    'id' => '220',
+    'name' => '刀剪',
+  ),
   81 => 
   array (
     'cat_id' => '81',
@@ -2591,38 +2591,6 @@ $data = array (
     'level' => 1,
     'id' => '78',
     'name' => '电动工具',
-  ),
-  226 => 
-  array (
-    'cat_id' => '226',
-    'cat_name' => '电动工具电池充电器',
-    'measure_unit' => '',
-    'parent_id' => '78',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 2,
-    'id' => '226',
-    'name' => '电动工具电池充电器',
-  ),
-  223 => 
-  array (
-    'cat_id' => '223',
-    'cat_name' => '切割机',
-    'measure_unit' => '',
-    'parent_id' => '78',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 2,
-    'id' => '223',
-    'name' => '切割机',
   ),
   224 => 
   array (
@@ -2688,6 +2656,38 @@ $data = array (
     'id' => '222',
     'name' => '起子机',
   ),
+  226 => 
+  array (
+    'cat_id' => '226',
+    'cat_name' => '电动工具电池充电器',
+    'measure_unit' => '',
+    'parent_id' => '78',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 2,
+    'id' => '226',
+    'name' => '电动工具电池充电器',
+  ),
+  223 => 
+  array (
+    'cat_id' => '223',
+    'cat_name' => '切割机',
+    'measure_unit' => '',
+    'parent_id' => '78',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 2,
+    'id' => '223',
+    'name' => '切割机',
+  ),
   82 => 
   array (
     'cat_id' => '82',
@@ -2703,22 +2703,6 @@ $data = array (
     'level' => 1,
     'id' => '82',
     'name' => '电子物料',
-  ),
-  235 => 
-  array (
-    'cat_id' => '235',
-    'cat_name' => 'Arduino',
-    'measure_unit' => '',
-    'parent_id' => '82',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 2,
-    'id' => '235',
-    'name' => 'Arduino',
   ),
   233 => 
   array (
@@ -2752,6 +2736,22 @@ $data = array (
     'id' => '234',
     'name' => 'B&R',
   ),
+  235 => 
+  array (
+    'cat_id' => '235',
+    'cat_name' => 'Arduino',
+    'measure_unit' => '',
+    'parent_id' => '82',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 2,
+    'id' => '235',
+    'name' => 'Arduino',
+  ),
   79 => 
   array (
     'cat_id' => '79',
@@ -2767,22 +2767,6 @@ $data = array (
     'level' => 1,
     'id' => '79',
     'name' => '测量工具',
-  ),
-  229 => 
-  array (
-    'cat_id' => '229',
-    'cat_name' => '装修内窥镜',
-    'measure_unit' => '',
-    'parent_id' => '79',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-    'level' => 2,
-    'id' => '229',
-    'name' => '装修内窥镜',
   ),
   227 => 
   array (
@@ -2815,6 +2799,22 @@ $data = array (
     'level' => 2,
     'id' => '228',
     'name' => '墙体探测仪',
+  ),
+  229 => 
+  array (
+    'cat_id' => '229',
+    'cat_name' => '装修内窥镜',
+    'measure_unit' => '',
+    'parent_id' => '79',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+    'level' => 2,
+    'id' => '229',
+    'name' => '装修内窥镜',
   ),
   7 => 
   array (

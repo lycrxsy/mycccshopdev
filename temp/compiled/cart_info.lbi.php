@@ -9,15 +9,15 @@
             <div class="cart-panel-content">
                 <?php if ($this->_var['cart_list']): ?>
                 <div class="cart-list">
-                   <?php $_from = $this->_var['cart_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_21135000_1522069450');if (count($_from)):
-    foreach ($_from AS $this->_var['goods_0_21135000_1522069450']):
+                   <?php $_from = $this->_var['cart_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'goods_0_99359100_1523222150');if (count($_from)):
+    foreach ($_from AS $this->_var['goods_0_99359100_1523222150']):
 ?>
                     <div class="cart-item">
                         <div class="item-goods">
-                            <span class="p-img"><a href="<?php echo $this->_var['goods_0_21135000_1522069450']['url']; ?>"><img src="<?php if ($this->_var['goods_0_21135000_1522069450']['goods_thumb'] == 'package_img'): ?>../images/jmpic/ico_cart_package.gif<?php else: ?><?php echo $this->_var['goods_0_21135000_1522069450']['thumb']; ?><?php endif; ?>" width="50" height="50" alt="<?php echo $this->_var['goods_0_21135000_1522069450']['short_name']; ?>"></a></span>
-                        <div class="p-name"><a href="<?php echo $this->_var['goods_0_21135000_1522069450']['url']; ?>" title="<?php echo $this->_var['goods_0_21135000_1522069450']['short_name']; ?>"><?php echo $this->_var['goods_0_21135000_1522069450']['short_name']; ?></a></div>
-                        <div class="p-price"><strong><?php echo $this->_var['goods_0_21135000_1522069450']['shop_price']; ?></strong>×<?php echo $this->_var['goods_0_21135000_1522069450']['goods_number']; ?></div>
-                        <a href="javascript:;" class="p-del" onClick="deleteCartGoods(<?php echo $this->_var['goods_0_21135000_1522069450']['rec_id']; ?>)">删除</a>
+                            <span class="p-img"><a href="<?php echo $this->_var['goods_0_99359100_1523222150']['url']; ?>"><img src="<?php if ($this->_var['goods_0_99359100_1523222150']['goods_thumb'] == 'package_img'): ?>../images/jmpic/ico_cart_package.gif<?php else: ?><?php echo $this->_var['goods_0_99359100_1523222150']['thumb']; ?><?php endif; ?>" width="50" height="50" alt="<?php echo $this->_var['goods_0_99359100_1523222150']['short_name']; ?>"></a></span>
+                        <div class="p-name"><a href="<?php echo $this->_var['goods_0_99359100_1523222150']['url']; ?>" title="<?php echo $this->_var['goods_0_99359100_1523222150']['short_name']; ?>"><?php echo $this->_var['goods_0_99359100_1523222150']['short_name']; ?></a></div>
+                        <div class="p-price"><strong><?php echo $this->_var['goods_0_99359100_1523222150']['shop_price']; ?></strong>×<?php echo $this->_var['goods_0_99359100_1523222150']['goods_number']; ?></div>
+                        <a href="javascript:;" class="p-del" onClick="deleteCartGoods(<?php echo $this->_var['goods_0_99359100_1523222150']['rec_id']; ?>)">删除</a>
                         </div>
                     </div>
                     <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>

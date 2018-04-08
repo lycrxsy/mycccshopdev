@@ -3,18 +3,18 @@
 <dt class="solid">
 <h3 class="h_title h_title2 clf">
 <?php if ($this->_var['article_categories']): ?>
-    <?php $_from = $this->_var['article_categories']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'cat_0_19646900_1522069450');if (count($_from)):
-    foreach ($_from AS $this->_var['cat_0_19646900_1522069450']):
+    <?php $_from = $this->_var['article_categories']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'cat_0_82772400_1523222150');if (count($_from)):
+    foreach ($_from AS $this->_var['cat_0_82772400_1523222150']):
 ?>
-<?php if ($this->_var['cat_0_19646900_1522069450']['id'] > 3): ?>
-<a class="h_title_none" href="<?php echo $this->_var['cat_0_19646900_1522069450']['url']; ?>" target="_blank"><?php echo htmlspecialchars($this->_var['articles_cat']['name']); ?></a>
+<?php if ($this->_var['cat_0_82772400_1523222150']['id'] > 3): ?>
+<a class="h_title_none" href="<?php echo $this->_var['cat_0_82772400_1523222150']['url']; ?>" target="_blank"><?php echo htmlspecialchars($this->_var['articles_cat']['name']); ?></a>
 <span class="clear_none">
-<?php $_from = $this->_var['cat_0_19646900_1522069450']['child']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('k', 'child_0_19662700_1522069450');$this->_foreach['name'] = array('total' => count($_from), 'iteration' => 0);
+<?php $_from = $this->_var['cat_0_82772400_1523222150']['child']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('k', 'child_0_82836400_1523222150');$this->_foreach['name'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['name']['total'] > 0):
-    foreach ($_from AS $this->_var['k'] => $this->_var['child_0_19662700_1522069450']):
+    foreach ($_from AS $this->_var['k'] => $this->_var['child_0_82836400_1523222150']):
         $this->_foreach['name']['iteration']++;
 ?>
-<a href="<?php echo $this->_var['child_0_19662700_1522069450']['url']; ?>" target="_blank"><?php echo htmlspecialchars($this->_var['child_0_19662700_1522069450']['name']); ?></a>
+<a href="<?php echo $this->_var['child_0_82836400_1523222150']['url']; ?>" target="_blank"><?php echo htmlspecialchars($this->_var['child_0_82836400_1523222150']['name']); ?></a>
 <?php endforeach; endif; unset($_from); ?><?php $this->pop_vars();; ?>
 </span>
 <?php endif; ?>
