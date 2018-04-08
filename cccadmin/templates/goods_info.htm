@@ -117,7 +117,17 @@
             <input type="button" value="{$lang.compute_by_mp}" onclick="marketPriceSetted()" />
             {$lang.require_field}</td>
         </tr>
-        {if $user_rank_list}
+          <!-- 新增 最少数量限制 begin 20180409-->
+          <tr>
+              <td class="label">{$lang.lab_min_number}</td>
+              <td><input type="text" name="min_number" value="{$goods.min_number}" size="20" />
+                  <span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" mce_style="display: none;" {/if} id="minNumber">{$lang.notice_min_number}</span>
+              </td>
+              </td>
+          </tr>
+          <!-- 最少数量限制 end -->
+
+          {if $user_rank_list}
         <tr>
           <td class="label"><a href="javascript:showNotice('noticeUserPrice');" title="{$lang.form_notice}"><img src="images/notice.gif" width="21" height="21" border="0" alt="{$lang.form_notice}"></a>{$lang.lab_user_price}</td>
           <td>

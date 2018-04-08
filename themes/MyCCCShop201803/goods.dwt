@@ -269,7 +269,7 @@ myString[{$pkey}]="{$prod}";
               
               <li class="skunum_li cle"> <span class="lbl">数&nbsp;&nbsp;&nbsp;量</span>
                 <div class="skunum" id="skunum"> <span class="minus" title="减少1个数量"><i class="iconfont">-</i></span>
-                  <input id="number" name="number" type="text" min="1" value="1" onchange="countNum(0)">
+                  <input id="number" name="number" type="text" min="1" value="{$goods.min_number|default:"1"}" onchange="countNum(0)">
                   <span class="add" title="增加1个数量"><i class="iconfont">+</i></span> <cite class="storage"> 件 </cite> 
 		</div>
 		<div class="skunum" id="skunum">
@@ -441,7 +441,16 @@ function changePrice()
 
   var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
 
-  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+    {if $goods.min_number}
+        if(qty < {$goods.min_number})
+        {
+            alert('您输入的数字小于此商品最小购买数量：{$goods.min_number}');
+            qty = {$goods.min_number};
+    }
+    {/if}
+
+
+        Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
 }
 
 /**

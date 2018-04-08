@@ -172,6 +172,7 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit' || $_REQUEST['ac
             'integral'      => 0,
             'goods_number'  => $_CFG['default_storage'],
             'warn_number'   => 1,
+            'warn_number'   => 0,
             'promote_start_date' => local_date('Y-m-d'),
             'promote_end_date'   => local_date('Y-m-d', local_strtotime('+1 month')),
             'goods_weight'  => 0,
@@ -813,6 +814,7 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
     $is_shipping = isset($_POST['is_shipping']) ? 1 : 0;
     $goods_number = isset($_POST['goods_number']) ? $_POST['goods_number'] : 0;
     $warn_number = isset($_POST['warn_number']) ? $_POST['warn_number'] : 0;
+    $min_number = isset($_POST['min_number']) ? $_POST['min_number'] : 0;
     $goods_type = isset($_POST['goods_type']) ? $_POST['goods_type'] : 0;
     $give_integral = isset($_POST['give_integral']) ? intval($_POST['give_integral']) : '-1';
 	$fencheng = isset($_POST['fencheng']) ? intval($_POST['fencheng']) : '0';
@@ -835,13 +837,13 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
             $sql = "INSERT INTO " . $ecs->table('goods') . " (goods_name, goods_name_style, goods_sn, " .
                     "cat_id, brand_id, shop_price, market_price, is_promote, promote_price, " .
                     "promote_start_date, promote_end_date, goods_img, goods_thumb, original_img, keywords, goods_brief, " .
-                    "seller_note, goods_weight, goods_number, warn_number, integral, give_integral, is_best, is_new, is_hot, " .
+                    "seller_note, goods_weight, goods_number, warn_number,min_number, integral, give_integral, is_best, is_new, is_hot, " .
                     "is_on_sale, is_alone_sale, is_shipping, goods_desc, add_time, last_update, goods_type, rank_integral, fencheng, suppliers_id)" .
                 "VALUES ('$_POST[goods_name]', '$goods_name_style', '$goods_sn', '$catgory_id', " .
                     "'$brand_id', '$shop_price', '$market_price', '$is_promote','$promote_price', ".
                     "'$promote_start_date', '$promote_end_date', '$goods_img', '$goods_thumb', '$original_img', ".
                     "'$_POST[keywords]', '$_POST[goods_brief]', '$_POST[seller_note]', '$goods_weight', '$goods_number',".
-                    " '$warn_number', '$_POST[integral]', '$give_integral', '$is_best', '$is_new', '$is_hot', '$is_on_sale', '$is_alone_sale', $is_shipping, ".
+                    " '$warn_number', '$min_number', '$_POST[integral]', '$give_integral', '$is_best', '$is_new', '$is_hot', '$is_on_sale', '$is_alone_sale', $is_shipping, ".
                     " '$_POST[goods_desc]', '" . gmtime() . "', '". gmtime() ."', '$goods_type', '$rank_integral', '$fencheng', '$suppliers_id')";
         }
         else
@@ -849,13 +851,13 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
             $sql = "INSERT INTO " . $ecs->table('goods') . " (goods_name, goods_name_style, goods_sn, " .
                     "cat_id, brand_id, shop_price, market_price, is_promote, promote_price, " .
                     "promote_start_date, promote_end_date, goods_img, goods_thumb, original_img, keywords, goods_brief, " .
-                    "seller_note, goods_weight, goods_number, warn_number, integral, give_integral, is_best, is_new, is_hot, is_real, " .
+                    "seller_note, goods_weight, goods_number, warn_number, min_number, integral, give_integral, is_best, is_new, is_hot, is_real, " .
                     "is_on_sale, is_alone_sale, is_shipping, goods_desc, add_time, last_update, goods_type, extension_code, rank_integral, fencheng)" .
                 "VALUES ('$_POST[goods_name]', '$goods_name_style', '$goods_sn', '$catgory_id', " .
                     "'$brand_id', '$shop_price', '$market_price', '$is_promote','$promote_price', ".
                     "'$promote_start_date', '$promote_end_date', '$goods_img', '$goods_thumb', '$original_img', ".
                     "'$_POST[keywords]', '$_POST[goods_brief]', '$_POST[seller_note]', '$goods_weight', '$goods_number',".
-                    " '$warn_number', '$_POST[integral]', '$give_integral', '$is_best', '$is_new', '$is_hot', 0, '$is_on_sale', '$is_alone_sale', $is_shipping, ".
+                    " '$warn_number', '$min_number', '$_POST[integral]', '$give_integral', '$is_best', '$is_new', '$is_hot', 0, '$is_on_sale', '$is_alone_sale', $is_shipping, ".
                     " '$_POST[goods_desc]', '" . gmtime() . "', '". gmtime() ."', '$goods_type', '$code', '$rank_integral', '$fencheng')";
         }
     }
@@ -910,6 +912,7 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
                 "goods_weight = '$goods_weight'," .
                 "goods_number = '$goods_number', " .
                 "warn_number = '$warn_number', " .
+                "min_number = '$min_number', " .
                 "integral = '$_POST[integral]', " .
                 "give_integral = '$give_integral', " .
                 "rank_integral = '$rank_integral', " .
