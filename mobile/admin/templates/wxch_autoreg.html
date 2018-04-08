@@ -1,0 +1,58 @@
+{include file="wxch_pageheader.htm"}
+<div class="form-div" id="conent_area">
+
+<form method="post" name="theForm" action="wxch-ent.php?act=autoreg">
+
+  <table id="general-table" align="center">
+  <tbody><tr>
+    <td style="font-weight: bold;color:#192E32; " width="20%">用户名前缀:</td>
+    <td>
+        <input type="text" name="username" value="{$data.autoreg_name}">
+        <span> wx_+user_id 生成：wx_113</span>
+    </td>
+  </tr>
+      <tr>
+          <td style="font-weight: bold; color:#192E32;" width="20%">密码前缀:</td>
+          <td><input type="text" name="userpwd" value="{$cfg.cfg_value}"></td>
+      </tr>
+      <tr>
+          <td style="font-weight: bold; color:#192E32;" width="20%">随机密码位数:</td>
+          <td>
+              <input type="text" name="rand" value="{$data.autoreg_rand}">
+              <span> 密码前缀+随机密码 生成：wxch23159</span>
+          </td>
+
+      </tr>
+  <tr>
+    <td style="font-weight: bold;color:#192E32;">默认会员等级:</td>
+    <td>
+            <select name="rank_id">
+                <option {if $rank_id eq 0}selected{/if}>请选择...</option>
+                {foreach from=$w_data item=userrank}
+                      <option name="rank_id" value="{$userrank.rank_id}" {if $rank_id eq $userrank.rank_id}selected{/if}>{$userrank.rank_name}</option>
+                {/foreach}
+               </select>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="font-weight: bold;color:#192E32;">自动注册开关:</td>
+    <td>
+      <input type="radio" name="state" value="1" {if $data.state ==1}checked="checked" {/if} />开启
+      <input type="radio" name="state" value="0"  {if $data.state ==0}checked="checked" {/if}/>关闭
+
+      <input type="hidden" name="tpl" value="">
+    </td>
+  </tr>
+
+
+  <tr>
+    <td colspan="2" align="center"><input type="submit" value=" 确定 " class="button"></td>
+  </tr>
+  </tbody></table>
+</form>
+
+
+</div>
+
+{include file="wxch_pagefooter.htm"}

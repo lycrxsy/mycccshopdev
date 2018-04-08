@@ -1,0 +1,119 @@
+<!-- $Id: wxch_order.html  2014-1-5  Z djks $ -->
+{include file="wxch_pageheader.htm"}
+
+{insert_scripts files="../data/static/js/utils.js"}
+
+<!-- start goods form -->
+
+<div class="tab-div">
+
+    <!-- tab bar -->
+
+    <div id="tabbar-div">
+
+        <p>
+
+            <span class="tab-front" id="general-tab">设置</span>
+
+        </p>
+
+    </div>
+
+
+
+    <!-- tab body -->
+
+    <div id="tabbody-div">
+
+        <form action="" method="post" name="form1" >
+
+            <!-- 通用信息 -->
+
+            <table width="100%" id="general-table" align="center">
+
+                <tr>
+
+                    <td class="label">{$wxch_lang.ur_here}：</td>
+
+                    <td>
+
+                        <label><input type="radio" name="autoload" value="1" {if $data.autoload eq 1}checked{/if}/>开启</label>
+
+                        <label><input type="radio" name="autoload" value="0" {if $data.autoload eq 0}checked{/if}/>关闭</label>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="label">通知类型：</td>
+
+                    <td>
+
+                        <select name="type">
+
+                            <option value="reorder" {if $data.type eq reorder}checked{/if} >订单提醒</option>
+
+                            <option value="pay" {if $data.type eq pay}checked{/if} >支付提醒</option>
+
+                        </select>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="label">管理员名称：</td>
+
+                    <td>
+
+                        <input name="name" type="text" size="15" value="{if $data.name}{$data.name}{else}{$admin_name}{/if}" />
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="label">微信openid：</td>
+
+                    <td>
+
+                        <input name="wxid" type="text" size="28" value="{$data.wxid}" />
+
+                        <span class="notice-span" >  微信粉丝-》发送信息中可查询到openid </span>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+
+
+
+
+            <div class="button-div">
+
+                <input type="submit" value="{$lang.button_submit}" class="button" />
+
+                <input type="reset" value="{$lang.button_reset}" class="button" />
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- end goods form -->
+
+
+
+{include file="wxch_pagefooter.htm"}
+

@@ -1,0 +1,109 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="wrap homepage-submenu relative">
+  <div class="submenu">
+<!--{foreach from=$categories item=cat name=categories}-->
+	    <!-- {if $smarty.foreach.categories.iteration<8}-->
+        <div class="submenu-item">
+        <p class="submenu-title i-global i-menu-{$smarty.foreach.categories.iteration}">
+         {$cat.name|escape:html}<i class="i-global submenu-arrow"></i>
+         <i class="submenu-shelter hide" style="display: none;"></i>
+        </p>
+        <ul class="submenu-hot clf">
+       <!--{foreach from=$cat.cat_id item=child}-->
+          <li><a target="_blank" title="{$child.name|escape:html}" href="{$child.url}" rel="nofollow">{$child.name|escape:html}</a></li>
+         <!--{/foreach}-->
+         </ul>
+        <dl class="submenu-detail hide" style="display: none;">
+         <dt class="submenu-detail-title">{$cat.name|escape:html}</dt>
+          <dd class="menu-column">
+            <ul class="submenu-list clf">
+            <!--{foreach from=$cat.cat_id item=child}-->
+              <li><a target="_blank" title="{$child.name|escape:html}" href="{$child.url}" rel="nofollow">{$child.name|escape:html}</a></li>
+               <!--{/foreach}-->
+              </ul>
+          </dd>
+          <dt class="submenu-detail-title">知名品牌</dt>
+          <dd class="menu-column">
+            <ul class="submenu-list clf">
+            <!--{foreach from=$cat.brands item=brand name=brands}-->
+              <!-- {if $smarty.foreach.brands.iteration<10}-->
+              <li><a target="_blank" title="{$brand.brand_name|escape:html}" href="{$brand.url}" rel="nofollow">{$brand.brand_name|escape:html}</a></li>
+             <!-- {/if} -->
+                <!-- {/foreach} -->
+              </ul>
+          </dd>
+          <dt class="submenu-detail-title">热卖商品</dt>
+          <dd class="menu-column">
+          <ul class="submenu-hot-sale clf">
+{if $cat.id eq 1}
+<!-- {foreach  from=cat_hot_list(1,8) item=hot  name=hots}-->
+<li><a target="_blank" href="{$hot.url}" title="{$hot.name|escape:html}">
+<p class="submenu-hot-sale-pic">
+<img src="{$hot.thumb}" alt="{$hot.name|escape:html}" style="display: inline;">
+</p>{$hot.name|escape:html}</a>
+</li>
+<!-- {/foreach} -->  
+{elseif $cat.id eq 2}
+<!-- {foreach  from=cat_hot_list(2,8) item=hot  name=hots}-->
+<li><a target="_blank" href="{$hot.url}" title="{$hot.name|escape:html}">
+<p class="submenu-hot-sale-pic">
+<img src="{$hot.thumb}" alt="{$hot.name|escape:html}" style="display: inline;">
+</p>{$hot.name|escape:html}</a>
+</li>
+<!-- {/foreach} -->        
+{elseif $cat.id eq 3}
+<!-- {foreach  from=cat_hot_list(3,8) item=hot  name=hots}-->
+<li><a target="_blank" href="{$hot.url}" title="{$hot.name|escape:html}">
+<p class="submenu-hot-sale-pic">
+<img src="{$hot.thumb}" alt="{$hot.name|escape:html}" style="display: inline;">
+</p>{$hot.name|escape:html}</a>
+</li>
+<!-- {/foreach} -->        
+{elseif $cat.id eq 4}
+<!-- {foreach  from=cat_hot_list(4,8) item=hot  name=hots}-->
+<li><a target="_blank" href="{$hot.url}" title="{$hot.name|escape:html}">
+<p class="submenu-hot-sale-pic">
+<img src="{$hot.thumb}" alt="{$hot.name|escape:html}" style="display: inline;">
+</p>{$hot.name|escape:html}</a>
+</li>
+<!-- {/foreach} -->        
+{elseif $cat.id eq 5}
+<!-- {foreach  from=cat_hot_list(5,8) item=hot  name=hots}-->
+<li><a target="_blank" href="{$hot.url}" title="{$hot.name|escape:html}">
+<p class="submenu-hot-sale-pic">
+<img src="{$hot.thumb}" alt="{$hot.name|escape:html}" style="display: inline;">
+</p>{$hot.name|escape:html}</a>
+</li>
+<!-- {/foreach} -->        
+{elseif $cat.id eq 6}
+<!-- {foreach  from=cat_hot_list(6,8) item=hot  name=hots}-->
+<li><a target="_blank" href="{$hot.url}" title="{$hot.name|escape:html}">
+<p class="submenu-hot-sale-pic">
+<img src="{$hot.thumb}" alt="{$hot.name|escape:html}" style="display: inline;">
+</p>{$hot.name|escape:html}</a>
+</li>
+<!-- {/foreach} -->   
+{elseif $cat.id eq 7}
+<!-- {foreach  from=cat_hot_list(7,8) item=hot  name=hots}-->
+<li><a target="_blank" href="{$hot.url}" title="{$hot.name|escape:html}">
+<p class="submenu-hot-sale-pic">
+<img src="{$hot.thumb}" alt="{$hot.name|escape:html}" style="display: inline;">
+</p>{$hot.name|escape:html}</a>
+</li>
+<!-- {/foreach} -->      
+{/if}
+</ul>        
+          </dd>
+        </dl>
+      </div>
+      <!-- {/if} -->
+      <!-- {/foreach} -->
+      </div>
+      <!--{foreach from=get_advlist_by_id(2) item=ad name=index_image}-->
+    <div class="leading-product">
+    <a href="{$ad.url}" target="_blank" rel="nofollow">
+   <img src="{$ad.image}" alt="{$ad.name}" style="display: inline;">
+  </a> 
+  </div>
+     <!--{/foreach}-->
+  </div>
