@@ -1,0 +1,27 @@
+cccadmin/goods.php结构简介
+
+03-29行 配置文件载入，
+
+
+
+
+31- 72 改变属性、数量时重新计算商品价格
+
+74- 89 添加的商品属性关联库
+
+93 - 152 商品购买记录ajax处理 （）
+
+156 - 361 PROCESSOR
+
+363 - 381 记录浏览历史 
+
+384     更新点击次数
+
+387 当前事件
+
+388  模板导入 goods.dwt 
+
+
+390 -  757   PRIVATE FUNCTION
+    get_linked_goods($goods_id)获得指定商品的关联商品
+    get_linked_articles($goods_id) 获得指定商品的关联文章

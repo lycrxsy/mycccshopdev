@@ -70,7 +70,6 @@ elseif ($_REQUEST['act'] == 'top')
 	$sql = 'SELECT count(ad_id) FROM '.$GLOBALS['ecs']->table('ad');
 	$ad_sum = $GLOBALS['db']->getOne($sql);
 	$smarty->assign('ad_sum', $ad_sum);
-	
 
     $smarty->display('top.htm');
 }

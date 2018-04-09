@@ -79,14 +79,14 @@ function reg(str)
     <!--{/if}--> 
   </div>
   <div class="detail cle"> 
-    <!-- 图片 --> 
-    <!-- #BeginLibraryItem "/library/goods_gallery.lbi" --><!-- #EndLibraryItem -->
+    <!-- 图片 -->
+      <!-- #BeginLibraryItem "/library/goods_gallery.lbi" --><!-- #EndLibraryItem -->
     <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
       
       <!-- 商品 -->
       <div class="item-info" id="item-info">
         <dl class="loaded">
-          <!-- 名字 -->
+            <!-- 名字 -->
           <dt class="product_name">
             <h1>{$goods.goods_style_name}</h1>
             <p class="desc"> <span class="gray">{$goods.goods_brief}</span> </p>
