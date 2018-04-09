@@ -94,7 +94,7 @@ if ($_REQUEST['act'] == 'list' || $_REQUEST['act'] == 'trash')
     /* 显示商品列表页面 */
     assign_query_info();
     $htm_file = ($_REQUEST['act'] == 'list') ?
-        'goods_list.htm' : (($_REQUEST['act'] == 'trash') ? 'goods_trash.htm' : 'group_list.htm');
+        'goods_list.htm' : (($_REQUEST['act'] == 'trash') ? 'goods_trash.htm' : 'goods_list.htm');
     $smarty->display($htm_file);
 }
 
@@ -242,6 +242,7 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit' || $_REQUEST['ac
                 'integral'      => 0,
                 'goods_number'  => 1,
                 'warn_number'   => 1,
+                'min_number'   => 0,
                 'promote_start_date' => local_date('Y-m-d'),
                 'promote_end_date'   => local_date('Y-m-d', gmstr2tome('+1 month')),
                 'goods_weight'  => 0,
@@ -883,6 +884,7 @@ elseif ($_REQUEST['act'] == 'insert' || $_REQUEST['act'] == 'update')
                 "goods_name = '$_POST[goods_name]', " .
                 "goods_name_style = '$goods_name_style', " .
                 "goods_sn = '$goods_sn', " .
+                "min_number = '$min_number', " .
                 "cat_id = '$catgory_id', " .
                 "brand_id = '$brand_id', " .
                 "shop_price = '$shop_price', " .

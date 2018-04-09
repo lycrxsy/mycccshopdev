@@ -3291,4 +3291,5 @@ function cart_favourable_amount($favourable)
     /* 优惠范围内的商品总额 */
     return $GLOBALS['db']->getOne($sql);
 }
+
 ?>
