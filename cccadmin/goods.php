@@ -172,7 +172,7 @@ elseif ($_REQUEST['act'] == 'add' || $_REQUEST['act'] == 'edit' || $_REQUEST['ac
             'integral'      => 0,
             'goods_number'  => $_CFG['default_storage'],
             'warn_number'   => 1,
-            'warn_number'   => 0,
+            'min_number'   => 0,
             'promote_start_date' => local_date('Y-m-d'),
             'promote_end_date'   => local_date('Y-m-d', local_strtotime('+1 month')),
             'goods_weight'  => 0,
